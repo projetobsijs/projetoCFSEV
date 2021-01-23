@@ -21,6 +21,12 @@ int main(void) {
 void menuSobre(void) {
     printf(" __________________________________________________________________________________\n");
     printf("|                                                                                  |\n");
+    printf("|                    Universidade Federal do Rio Grande do Norte                   |\n");
+    printf("|                        Centro de Ensino Superior do Serido                       |\n");
+    printf("|                         Disciplina DCT1106 -- Programação                        |\n");
+    printf("|                       Projeto Controle de fluxo de veiculos                      |\n");
+    printf("|__________________________________________________________________________________|\n");
+    printf("|                                                                                  |\n");
     printf("|                              = = = = CFSEV = = = =                               |\n");
     printf("|                           Controle do fluxo de veiculos                          |\n");
     printf("|__________________________________________________________________________________|\n");

@@ -37,7 +37,7 @@ int main(void) {
 
 
 void menuPrincipal(void) {
-    system("clear");
+system("clear");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
@@ -72,7 +72,7 @@ void menuPrincipal(void) {
 
 
 void telaSobre(void) {
-    system("clear");
+system("clear");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
@@ -105,7 +105,7 @@ void telaSobre(void) {
 
 
 void menuUsuario(void) {
-    system("clear");
+system("clear");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
@@ -140,7 +140,7 @@ void menuUsuario(void) {
 
 
 void menuVagas(void) {
-    system("clear");
+system("clear");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
@@ -174,7 +174,7 @@ void menuVagas(void) {
 
 
 void telaCadastrarUsuario(void) {
-    system("clear");
+system("clear");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
@@ -205,7 +205,7 @@ void telaCadastrarUsuario(void) {
 
 
 void menuHistorico(void) {
-    system("clear");
+system("clear");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");

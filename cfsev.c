@@ -19,6 +19,9 @@ void telaSobre(void);
 void menuUsuario(void);
 void menuVagas(void);
 void telaCadastrarUsuario(void);
+void telaPesquisa(void);
+void AtualizarCadastro(void);
+void DeletarUsuario(void);
 void menuHistorico(void);
 
 
@@ -31,6 +34,9 @@ int main(void) {
     menuUsuario();
     menuVagas();
     telaCadastrarUsuario();
+	telaPesquisa();
+	AtualizarCadastro();
+	DeletarUsuario();
     menuHistorico();
     return 0;
 }

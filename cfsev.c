@@ -138,7 +138,6 @@ system("clear");
 	getchar();
 }
 
-
 void menuVagas(void) {
 system("clear");
 	printf("\n");
@@ -200,6 +199,104 @@ system("clear");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("\n");
 	printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
+void telaPesquisa(void) {
+system("clear");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = = = = = =   Programa CFSEV    = = = = = = = =          ///\n");
+	printf("///          = Controle do Fluxo da Saida/Entrada de Veiculos  =          ///\n");
+    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///           Developed by  @italx_g and @sza_lucas - Jan, 2021           ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = Pesquisa de Usuario = = = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                      Digite o nome do Usuario                         ///\n");
+	printf("///                                                                       ///\n");
+	printf("/// Nomes cadastrados:                                                    ///\n");
+	printf("/// 1.Fulano                                                              ///\n");	
+	printf("/// 2.Beltrano                                                            ///\n");
+	printf("/// 3.Zoio                                                                ///\n");
+	printf("/// 4.Everton                                                             ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
+void AtualizarCadastro(void) {
+system("clear");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = = = = = =   Programa CFSEV    = = = = = = = =          ///\n");
+	printf("///          = Controle do Fluxo da Saida/Entrada de Veiculos  =          ///\n");
+    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///           Developed by  @italx_g and @sza_lucas - Jan, 2021           ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = Atualizacao de cadastro = = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	printf("///           Informe o Usuario desejado                                  ///\n");
+	printf("///                                                                       ///\n");
+	printf("///   Nome: Fulano                               email: fulano@gmail.com  ///\n");	
+	printf("///   Celular: (84) 999999999                    Veiculo: HB.20           ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///                Deseja alterar esse Usuario: Sim ou Nao                ///\n");
+	printf("///                                                                       ///\n");			
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
+void DeletarUsuario(void) {
+system("clear");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = = = = = =   Programa CFSEV    = = = = = = = =          ///\n");
+	printf("///          = Controle do Fluxo da Saida/Entrada de Veiculos  =          ///\n");
+    printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///           Developed by  @italx_g and @sza_lucas - Jan, 2021           ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = Excluir Usuario = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                      Informe o Usuario desejado:                      ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           Deseja Realmente excluir esse Usuario: Sim ou Nao           ///\n");
+	printf("///                                                                       ///\n");			
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
 }
 

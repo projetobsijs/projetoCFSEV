@@ -12,7 +12,7 @@
 #include <locale.h>
 
 /// 
-/// Assinaturas das funções
+///  Assinaturas das funções
 ///
 void menuPrincipal(void);
 void telaSobre(void);
@@ -86,7 +86,7 @@ system("clear");
 void telaSobre(void) {
 system("clear");
 	printf("\n");
-	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("////////////////////// ///////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
 	printf("///              Universidade Federal do Rio Grande do Norte              ///\n");
 	printf("///                  Centro de Ensino Superior do Seridó                  ///\n");

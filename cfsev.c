@@ -34,21 +34,21 @@ void menuHistorico(void);
 /// Programa Principal
 ///
 int main(void) {
-    telaSobre();
-    menuPrincipal();
-    menuUsuario();
-    menuVagas();
-    TotalVagas();
-    VagasLivres();
-    VagasOcupadas();
-    telaCadastrarUsuario();
-    telaPesquisa();
-	telaPesquisaDois();
-    AtualizarCadastro();
-	AtualizarCadastroDois();
-    DeletarUsuario();
-    menuHistorico();
-    return 0;
+		telaSobre();
+		menuPrincipal();
+		menuUsuario();
+		menuVagas();
+		TotalVagas();
+		VagasLivres();
+		VagasOcupadas();
+		telaCadastrarUsuario();
+		telaPesquisa();
+		telaPesquisaDois();
+		AtualizarCadastro();
+		AtualizarCadastroDois();
+		DeletarUsuario();
+		menuHistorico();
+		return 0;
 }
 
 

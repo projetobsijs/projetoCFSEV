@@ -14,7 +14,7 @@
 /// 
 ///  Assinaturas das funções
 ///
-void menuPrincipal(void);
+char menuPrincipal(void);
 void telaSobre(void);
 void menuUsuario(void);
 void menuVagas(void);
@@ -34,8 +34,9 @@ void menuHistorico(void);
 /// Programa Principal
 ///
 int main(void) {
+		char opcao;
 		telaSobre();
-		menuPrincipal();
+		opcao = menuPrincipal();
 		menuUsuario();
 		menuVagas();
 		TotalVagas();
@@ -52,8 +53,9 @@ int main(void) {
 }
 
 
-void menuPrincipal(void) {
+char menuPrincipal(void) {
 system("clear");
+	char op;
 		printf("\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("///                                                                       ///\n");
@@ -77,13 +79,16 @@ system("clear");
 		printf("///           4. Informacoes sobre o sistema                              ///\n");
 		printf("///           0. Encerra o programa                                       ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Escolha a opcao desejada:                                   ///\n");
+		printf("///           Escolha a opcao desejada: ");
+		scanf("%c", &op);
+		getchar();		
 		printf("///                                                                       ///\n");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+		printf("\n");
 		getchar();
+		return op;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -371,7 +376,7 @@ system("clear");
 		printf("///           3. Vagas em uso                                             ///\n");
 		printf("///           0. Voltar ao menu anterior                                  ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Escolha a opção desejada:                                   ///\n");
+		printf("///           Escolha a opcao desejada:                                   ///\n");
 		printf("///                                                                       ///\n");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");

@@ -14,18 +14,18 @@
 /// 
 ///  Assinaturas das funções
 ///
-char menuPrincipal(void);
-void telaSobre(void);
-void menuUsuario(void);
+char menuPrincipal(void); ///
+void telaSobre(void); ///
+char menuUsuario(void); ///
 void menuVagas(void);
 void TotalVagas(void);
 void VagasLivres(void);
-void VagasOcupadas(void);
+void VagasOcupadas(void); 
 void telaCadastrarUsuario(void);
-void telaPesquisa(void);
-void telaPesquisaDois(void);
-void AtualizarCadastro(void);
-void AtualizarCadastroDois(void);
+void telaPesquisa(void); ///???
+void telaPesquisaDois(void); ///
+void AtualizarCadastro(void); ///???
+void AtualizarCadastroDois(void); ///
 void DeletarUsuario(void);
 void menuHistorico(void);
 
@@ -37,7 +37,7 @@ int main(void) {
 		char opcao;
 		telaSobre();
 		opcao = menuPrincipal();
-		menuUsuario();
+		opcao = menuUsuario();
 		menuVagas();
 		TotalVagas();
 		VagasLivres();
@@ -131,7 +131,8 @@ system("clear");
 ///////////////////////////////////TELA USUARIO///////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-void menuUsuario(void) {
+char menuUsuario(void) {
+	char op;
 system("clear");
 		printf("\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -156,16 +157,25 @@ system("clear");
 		printf("///           4. Excluir um Usuario do sistema                            ///\n");
 		printf("///           0. Voltar ao menu anterior                                  ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Escolha a opcao desejada:                                   ///\n");
+		printf("///           Escolha a opcao desejada: ");
+		scanf("%c", &op);
+		getchar();		
 		printf("///                                                                       ///\n");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
 		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 		getchar();
+		return op;
 }
 
 void telaCadastrarUsuario(void) {
+	char placa[7];
+	char nome[51];
+	char email[51];
+	char nasc[11];
+	char celular[12];
+
 system("clear");
 		printf("\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -184,11 +194,21 @@ system("clear");
 		printf("///           = = = = = = = = Cadastrar Usuario = = = = = = =             ///\n");
 		printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Nome:                                                       ///\n");
-		printf("///           E-mail:                                                     ///\n");
-		printf("///           Celular:                                                    ///\n");
-		printf("///           Veiculo:                                                    ///\n");
-		printf("///                                                                       ///\n");
+		printf("///           Placa do Veículo (apenas números): ");
+		scanf("%[0-9 A-Z]", placa);
+		getchar();
+		printf("///           Nome completo: ");
+		scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
+		getchar();
+		printf("///           E-mail: ");
+		scanf("%[a-z@.]", email);
+		getchar();
+		printf("///           Data de Nascimento (dd/mm/aaaa):  ");
+		scanf("%[0-9/]", nasc);
+		getchar();
+		printf("///           Celular  (apenas números): ");
+		scanf("%[0-9]", celular);
+		getchar();                                                                    ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
 		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
@@ -216,7 +236,7 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("///           Digite o nome do Usuario:                                   ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Digite 0 para voltar ao menu principal.                     ///\n");
+		printf("///                                                                       ///\n");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
@@ -249,7 +269,6 @@ system("clear");
 		printf("///           Celular: ---------------                                    ///\n");
 		printf("///           Veiculo: ---------------                                    ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Digite 0 para voltar ao menu principal.                     ///\n");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
@@ -278,7 +297,7 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("///           Digite o nome do Usuario:                                   ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Digite 0 para voltar ao menu principal.                     ///\n");
+		printf("///                                                                       ///\n");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
@@ -311,7 +330,6 @@ system("clear");
 		printf("///           Novo celular:                                               ///\n");
 		printf("///           Novo veiculo:                                               ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Digite 0 para voltar ao menu principal.                     ///\n");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");

@@ -17,9 +17,9 @@
 char menuPrincipal(void); ///
 void telaSobre(void); ///
 char menuUsuario(void); ///
-void menuVagas(void);
-void TotalVagas(void);
-void VagasLivres(void);
+char menuVagas(void); ///
+char TotalVagas(void); ///
+char VagasLivres(void); ///
 void VagasOcupadas(void); 
 void telaCadastrarUsuario(void);
 void telaPesquisa(void); ///???
@@ -38,9 +38,9 @@ int main(void) {
 		telaSobre();
 		opcao = menuPrincipal();
 		opcao = menuUsuario();
-		menuVagas();
-		TotalVagas();
-		VagasLivres();
+		opcao = menuVagas();
+		opcao = TotalVagas();
+		opcao = VagasLivres();
 		VagasOcupadas();
 		telaCadastrarUsuario();
 		telaPesquisa();
@@ -208,7 +208,7 @@ system("clear");
 		getchar();
 		printf("///           Celular  (apenas números): ");
 		scanf("%[0-9]", celular);
-		getchar();                                                                    ///\n");
+		getchar();                                                                   
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
 		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
@@ -370,8 +370,9 @@ system("clear");
 /////////////////////////////////////MENU VAGAS///////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-void menuVagas(void) {
+char menuVagas(void) {
 system("clear");
+	char op;
 		printf("\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("///                                                                       ///\n");
@@ -394,7 +395,9 @@ system("clear");
 		printf("///           3. Vagas em uso                                             ///\n");
 		printf("///           0. Voltar ao menu anterior                                  ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Escolha a opcao desejada:                                   ///\n");
+		printf("///           Escolha a opcao desejada: ");
+		scanf("%c", &op);
+		getchar();
 		printf("///                                                                       ///\n");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -403,8 +406,9 @@ system("clear");
 		getchar();
 }
 
-void TotalVagas(void) {
+char TotalVagas(void) {
 system("clear");
+	char op;
 		printf("\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("///                                                                       ///\n");
@@ -424,7 +428,9 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("///           Total de vagas:                                             ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Digite 0 para voltar ao menu principal.                     ///\n");
+		printf("///           Digite 0 para voltar ao menu principal: ");
+		scanf("%c", &op);
+		getchar();
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("///                                                                       ///\n");
@@ -436,8 +442,9 @@ system("clear");
 		getchar();
 }
 
-void VagasLivres(void) {
+char VagasLivres(void) {
 system("clear");
+	char op;
 		printf("\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("///                                                                       ///\n");
@@ -457,7 +464,9 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("///           Vagas livres:                                               ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Digite 0 para voltar ao menu Principal                      ///\n");
+		printf("///           Digite 0 para voltar ao menu Principal: ");
+		scanf("%c", &op);
+		getchar();
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");

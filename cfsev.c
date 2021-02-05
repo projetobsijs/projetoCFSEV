@@ -406,6 +406,7 @@ system("clear");
 		printf("\n");
 		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 		getchar();
+		return op;
 }
 
 char TotalVagas(void) {
@@ -442,6 +443,7 @@ system("clear");
 		printf("\n");
 		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 		getchar();
+		return op; 
 }
 
 char VagasLivres(void) {
@@ -474,6 +476,7 @@ system("clear");
 		printf("\n");
 		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 		getchar();
+		return op;
 }
 
 char VagasOcupadas(void) {
@@ -506,6 +509,7 @@ system("clear");
 		printf("\n");
 		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 		getchar();
+		return op;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -544,4 +548,5 @@ system("clear");
 		printf("\n");
 		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 		getchar();
+		return op;
 }

@@ -20,14 +20,14 @@ char menuUsuario(void); ///
 char menuVagas(void); ///
 char TotalVagas(void); ///
 char VagasLivres(void); ///
-void VagasOcupadas(void); 
+char VagasOcupadas(void); ///
 void telaCadastrarUsuario(void);
 void telaPesquisa(void); ///???
 void telaPesquisaDois(void); ///
 void AtualizarCadastro(void); ///???
 void AtualizarCadastroDois(void); ///
-void DeletarUsuario(void);
-void menuHistorico(void);
+void DeletarUsuario(void); ///???
+char menuHistorico(void); ///???
 
 
 ///
@@ -41,14 +41,14 @@ int main(void) {
 		opcao = menuVagas();
 		opcao = TotalVagas();
 		opcao = VagasLivres();
-		VagasOcupadas();
+		opcao = VagasOcupadas();
 		telaCadastrarUsuario();
 		telaPesquisa();
 		telaPesquisaDois();
 		AtualizarCadastro();
 		AtualizarCadastroDois();
 		DeletarUsuario();
-		menuHistorico();
+		opcao = menuHistorico();
 		return 0;
 }
 
@@ -86,7 +86,7 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		printf("\n");
+		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 		getchar();
 		return op;
 }
@@ -216,6 +216,7 @@ system("clear");
 }
 
 void telaPesquisa(void) {
+	char nome[51];
 system("clear");
 		printf("\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -234,7 +235,8 @@ system("clear");
 		printf("///           = = = = = = = Pesquisa de Usuario = = = = = = =             ///\n");
 		printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Digite o nome do Usuario:                                   ///\n");
+		printf("///           Digite o nome do Usuario: ");
+		scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
 		printf("///                                                                       ///\n");
 		printf("///                                                                       ///\n");
 		printf("///                                                                       ///\n");
@@ -474,8 +476,9 @@ system("clear");
 		getchar();
 }
 
-void VagasOcupadas(void) {
+char VagasOcupadas(void) {
 system("clear");
+	char op;
 		printf("\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("///                                                                       ///\n");
@@ -495,7 +498,9 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("///           Vagas ocupadas:                                             ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Digite 0 para voltar ao menu Principal                      ///\n");
+		printf("///           Digite 0 para voltar ao menu Principal: ");
+		scanf("%c", &op);
+		getchar();
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
@@ -507,8 +512,9 @@ system("clear");
 ///////////////////////////////////MENU HISTORICO/////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-void menuHistorico(void) {
+char menuHistorico(void) {
 system("clear");
+	char op;
 		printf("\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("///                                                                       ///\n");
@@ -530,7 +536,9 @@ system("clear");
 		printf("///           1. Historico do uso de vagas no ultimo dia                  ///\n");
 		printf("///           0. Voltar ao menu anterior                                  ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Escolha a opção desejada:                                   ///\n");
+		printf("///           Escolha a opção desejada: ");
+		scanf("%c", &op);
+		getchar();
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");

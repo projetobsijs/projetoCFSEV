@@ -14,20 +14,20 @@
 /// 
 ///  Assinaturas das funções
 ///
-char menuPrincipal(void); ///
-void telaSobre(void); ///
-char menuUsuario(void); ///
-char menuVagas(void); ///
-char TotalVagas(void); ///
-char VagasLivres(void); ///
-char VagasOcupadas(void); ///
-void telaCadastrarUsuario(void);
-void telaPesquisa(void); ///???
-void telaPesquisaDois(void); ///
-void AtualizarCadastro(void); ///???
-void AtualizarCadastroDois(void); ///
-void DeletarUsuario(void); ///???
-char menuHistorico(void); ///???
+char menuPrincipal(void); 
+void telaSobre(void); 
+char menuUsuario(void); 
+char menuVagas(void); 
+char TotalVagas(void); 
+char VagasLivres(void); 
+char VagasOcupadas(void);
+char telaCadastrarUsuario(void); 
+void telaPesquisa(void); 
+void telaPesquisaDois(void); 
+void AtualizarCadastro(void); 
+void AtualizarCadastroDois(void); 
+void DeletarUsuario(void); 
+char menuHistorico(void); 
 
 
 ///
@@ -35,8 +35,8 @@ char menuHistorico(void); ///???
 ///
 int main(void) {
 		char opcao;
-		telaSobre();
 		opcao = menuPrincipal();
+		telaSobre();
 		opcao = menuUsuario();
 		opcao = menuVagas();
 		opcao = TotalVagas();
@@ -86,7 +86,6 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 		getchar();
 		return op;
 }
@@ -164,12 +163,11 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 		getchar();
 		return op;
 }
 
-void telaCadastrarUsuario(void) {
+char telaCadastrarUsuario(void) {
 	char placa[7];
 	char nome[51];
 	char email[51];
@@ -211,12 +209,10 @@ system("clear");
 		getchar();                                                                   
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 		getchar();
 }
 
 void telaPesquisa(void) {
-	char nome[51];
 system("clear");
 		printf("\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -235,9 +231,9 @@ system("clear");
 		printf("///           = = = = = = = Pesquisa de Usuario = = = = = = =             ///\n");
 		printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Digite o nome do Usuario: ");
-		scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
+		printf("///           Digite o nome do Usuario:                                   ///\n");
 		printf("///                                                                       ///\n");
+		printf("///           Digite 0 para voltar ao menu principal.                     ///\n");
 		printf("///                                                                       ///\n");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -299,6 +295,7 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("///           Digite o nome do Usuario:                                   ///\n");
 		printf("///                                                                       ///\n");
+		printf("///           Digite 0 para voltar ao menu principal.                     ///\n");
 		printf("///                                                                       ///\n");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -404,7 +401,6 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 		getchar();
 		return op;
 }
@@ -429,19 +425,14 @@ system("clear");
 		printf("///           = = = = = = =   Total de Vagas  = = = = = = = =             ///\n");
 		printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Total de vagas:                                             ///\n");
+		printf("///           Digite 0 para voltar ao menu principal:                     ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Digite 0 para voltar ao menu principal: ");
+		printf("///           Total de vagas: ");
 		scanf("%c", &op);
 		getchar();
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
-		printf("///                                                                       ///\n");
-		printf("///           Digite Editar para alterar o total de vagas                 ///\n");
-		printf("///                                                                       ///\n");
-		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 		getchar();
 		return op; 
 }
@@ -466,18 +457,17 @@ system("clear");
 		printf("///           = = = = = = = =   Vagas livres  = = = = = = = =             ///\n");
 		printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Vagas livres:                                               ///\n");
+		printf("///           Digite 0 para voltar ao menu principal:                     ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Digite 0 para voltar ao menu Principal: ");
+		printf("///           Vagas livres: ");
 		scanf("%c", &op);
 		getchar();
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 		getchar();
 		return op;
-}
+} 
 
 char VagasOcupadas(void) {
 system("clear");
@@ -499,15 +489,14 @@ system("clear");
 		printf("///           = = = = = = =   Vagas Ocupadas    = = = = = = =             ///\n");
 		printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Vagas ocupadas:                                             ///\n");
+		printf("///           Digite 0 para voltar ao menu principal:                     ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Digite 0 para voltar ao menu Principal: ");
+		printf("///           Vagas ocupadas: ");
 		scanf("%c", &op);
 		getchar();
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 		getchar();
 		return op;
 }

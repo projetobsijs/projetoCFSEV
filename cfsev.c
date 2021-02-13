@@ -38,32 +38,48 @@ void telaSobre(void);
 ///
 int main(void) {
 		char opcao;
-		opcao = menuPrincipal();
-
-		opcao = menuUsuario();
-		telaCadastrarUsuario();
-		AtualizarCadastro();
-		AtualizarCadastroDois();
-		telaPesquisa();
-		telaPesquisaDois();
-		DeletarUsuario();
-
-		opcao = menuVagas();
-		opcao = TotalVagas();
-		opcao = VagasLivres();
-		opcao = VagasOcupadas();		
+		do {opcao = menuPrincipal();
+			switch(opcao) {
+					case '1':		menuUsuario();
+	                                break;
+					case '2':		menuVagas();
+									break;
+					case '3':		menuHistorico();
+									break;
+					case '4':		telaSobre();
+									break;								
+			}
 		
-		opcao = menuHistorico();
+		} while (opcao != '0');
+		return 0;
 		
-		telaSobre();
+		// Luquinhas essas opções abaixo ainda tão para ser feitas 
+		//ai eu separei elas pra facilitar a visualização
+		//ai vc pode tentar fazer essa do menu usuario que eu termino as outras  ai gg fica 7 para cada
+		//opcao = menuUsuario();
+		//telaCadastrarUsuario();
+		//AtualizarCadastro();
+		//AtualizarCadastroDois();
+		//telaPesquisa();
+		//telaPesquisaDois();
+		//DeletarUsuario();
+
+		//opcao = menuVagas();
+		//opcao = TotalVagas();
+		//opcao = VagasLivres();
+		//opcao = VagasOcupadas();		
+		
+		//opcao = menuHistorico();
+		
+		//telaSobre();
 
 		return 0;
 }
 
 
 char menuPrincipal(void) {
-system("clear");
 	char op;
+system("clear");
 		printf("\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("///                                                                       ///\n");
@@ -94,7 +110,6 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		getchar();
 		return op;
 }
 

@@ -14,21 +14,24 @@
 /// 
 ///  Assinaturas das funções
 ///
-char menuPrincipal(void); 
-void telaSobre(void); 
+char menuPrincipal(void);
+
 char menuUsuario(void); 
+char telaCadastrarUsuario(void);
+void AtualizarCadastro(void);
+void AtualizarCadastroDois(void);
+void telaPesquisa(void);
+void telaPesquisaDois(void);
+void DeletarUsuario(void);
+
 char menuVagas(void); 
 char TotalVagas(void); 
 char VagasLivres(void); 
 char VagasOcupadas(void);
-char telaCadastrarUsuario(void); 
-void telaPesquisa(void); 
-void telaPesquisaDois(void); 
-void AtualizarCadastro(void); 
-void AtualizarCadastroDois(void); 
-void DeletarUsuario(void); 
-char menuHistorico(void); 
 
+char menuHistorico(void);
+
+void telaSobre(void); 
 
 ///
 /// Programa Principal
@@ -36,19 +39,24 @@ char menuHistorico(void);
 int main(void) {
 		char opcao;
 		opcao = menuPrincipal();
-		telaSobre();
+
 		opcao = menuUsuario();
+		telaCadastrarUsuario();
+		AtualizarCadastro();
+		AtualizarCadastroDois();
+		telaPesquisa();
+		telaPesquisaDois();
+		DeletarUsuario();
+
 		opcao = menuVagas();
 		opcao = TotalVagas();
 		opcao = VagasLivres();
-		opcao = VagasOcupadas();
-		telaCadastrarUsuario();
-		telaPesquisa();
-		telaPesquisaDois();
-		AtualizarCadastro();
-		AtualizarCadastroDois();
-		DeletarUsuario();
+		opcao = VagasOcupadas();		
+		
 		opcao = menuHistorico();
+		
+		telaSobre();
+
 		return 0;
 }
 
@@ -151,8 +159,8 @@ system("clear");
 		printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
 		printf("///                                                                       ///\n");
 		printf("///           1. Cadastrar um novo Usuario                                ///\n");
-		printf("///           2. Pesquisar os dados de um Usuario                         ///\n");
-		printf("///           3. Atualizar o cadastro de um Usuario                       ///\n");
+		printf("///           2. Atualizar o cadastro de um Usuario                       ///\n");
+		printf("///           3. Pesquisar os dados de um Usuario                         ///\n");
 		printf("///           4. Excluir um Usuario do sistema                            ///\n");
 		printf("///           0. Voltar ao menu anterior                                  ///\n");
 		printf("///                                                                       ///\n");

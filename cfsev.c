@@ -40,14 +40,15 @@ int main(void) {
 		char opcao;
 		do {opcao = menuPrincipal();
 			switch(opcao) {
+
 					case '1':		menuUsuario();
-	                                	break;
+	                                break;
 					case '2':		menuVagas();
-										break;
+									break;
 					case '3':		menuHistorico();
-										break;
+									break;
 					case '4':		telaSobre();
-										break;								
+									break;								
 			}
 		
 		} while (opcao != '0');

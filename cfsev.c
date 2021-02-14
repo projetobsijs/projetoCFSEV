@@ -9,74 +9,54 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 
 /// 
 ///  Assinaturas das funções
 ///
 char menuPrincipal(void);
+void moduloInformacoes(void);
+void telaSobre(void); 
 
+void moduloUsuario(void);
 char menuUsuario(void); 
 char telaCadastrarUsuario(void);
-void AtualizarCadastro(void);
-void AtualizarCadastroDois(void);
+void atualizarCadastro(void);
+void atualizarCadastroDois(void);
 void telaPesquisa(void);
 void telaPesquisaDois(void);
-void DeletarUsuario(void);
+void deletarUsuario(void);
 
+void moduloVagas(void);
 char menuVagas(void); 
-char TotalVagas(void); 
-char VagasLivres(void); 
-char VagasOcupadas(void);
+char totalVagas(void); 
+char vagasLivres(void); 
+char vagasOcupadas(void);
 
+void moduloHistorico(void);
 char menuHistorico(void);
-
-void telaSobre(void); 
 
 ///
 /// Programa Principal
 ///
 int main(void) {
 		char opcao;
-		do {opcao = menuPrincipal();
+		do {
+			opcao = menuPrincipal();
 			switch(opcao) {
 
-					case '1':		menuUsuario();
+					case '1':		moduloUsuario();
 	                                break;
-					case '2':		menuVagas();
+					case '2':		moduloVagas();
 									break;
-					case '3':		menuHistorico();
+					case '3':		moduloHistorico();
 									break;
-					case '4':		telaSobre();
+					case '4':		moduloInformacoes();
 									break;								
 			}
 		
 		} while (opcao != '0');
 		return 0;
-		
-		// Luquinhas essas opções abaixo ainda tão para ser feitas 
-		//ai eu separei elas pra facilitar a visualização
-		//ai vc pode tentar fazer essa do menu usuario que eu termino as outras  ai gg fica 7 para cada
-		//opcao = menuUsuario();
-		//telaCadastrarUsuario();
-		//AtualizarCadastro();
-		//AtualizarCadastroDois();
-		//telaPesquisa();
-		//telaPesquisaDois();
-		//DeletarUsuario();
-
-		//opcao = menuVagas();
-		//opcao = TotalVagas();
-		//opcao = VagasLivres();
-		//opcao = VagasOcupadas();		
-		
-		//opcao = menuHistorico();
-		
-		//telaSobre();
-
-		return 0;
 }
-
 
 char menuPrincipal(void) {
 	char op;
@@ -108,7 +88,6 @@ system("clear");
 		scanf("%c", &op);
 		getchar();		
 		printf("///                                                                       ///\n");
-		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
 		return op;
@@ -117,6 +96,12 @@ system("clear");
 //////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////TELA SOBRE///////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
+
+void moduloInformacoes(void) {
+
+	telaSobre();
+
+}
 
 void telaSobre(void) {
 system("clear");
@@ -146,13 +131,31 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+		printf("\t\t\t>>> Tecle <ENTER> para voltar...\n");
 		getchar();
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////TELA USUARIO///////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
+
+void moduloUsuario(void){
+		char opcao;
+		do {
+			opcao = menuUsuario();
+			switch(opcao){
+				
+					case '1':		telaCadastrarUsuario();
+	                                break;
+					case '2':		atualizarCadastro();
+									break;
+					case '3':		telaPesquisa();
+									break;
+					case '4':		deletarUsuario();
+									break;								
+			}					
+		} while (opcao != '0');
+}
 
 char menuUsuario(void) {
 	char op;
@@ -187,7 +190,6 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		getchar();
 		return op;
 }
 
@@ -233,7 +235,6 @@ system("clear");
 		getchar();                                                                   
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		getchar();
 }
 
 void telaPesquisa(void) {
@@ -262,8 +263,6 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-		getchar();
 }
 
 void telaPesquisaDois(void) {
@@ -294,11 +293,9 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-		getchar();
 }
 
-void AtualizarCadastro(void) {
+void atualizarCadastro(void) {
 system("clear");
 		printf("\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -324,11 +321,9 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-		getchar();
 }
 
-void AtualizarCadastroDois(void) {
+void atualizarCadastroDois(void) {
 system("clear");
 		printf("\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -356,11 +351,9 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-		getchar();
 }
 
-void DeletarUsuario(void) {
+void deletarUsuario(void) {
 system("clear");
 		printf("\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -385,13 +378,27 @@ system("clear");
 		printf("///                                                                       ///\n");			
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-		getchar();
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////MENU VAGAS///////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
+
+void moduloVagas(void) {
+		char opcao;
+		do {
+			opcao = menuVagas();
+			switch(opcao){
+				
+					case '1':		totalVagas();
+	                                break;
+					case '2':		vagasLivres();
+									break;
+					case '3':		vagasOcupadas();
+									break;								
+			}					
+		} while (opcao != '0');
+}
 
 char menuVagas(void) {
 system("clear");
@@ -429,7 +436,7 @@ system("clear");
 		return op;
 }
 
-char TotalVagas(void) {
+char totalVagas(void) {
 system("clear");
 	char op;
 		printf("\n");
@@ -457,11 +464,10 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		getchar();
 		return op; 
 }
 
-char VagasLivres(void) {
+char vagasLivres(void) {
 system("clear");
 	char op;
 		printf("\n");
@@ -489,11 +495,10 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		getchar();
 		return op;
 } 
 
-char VagasOcupadas(void) {
+char vagasOcupadas(void) {
 system("clear");
 	char op;
 		printf("\n");
@@ -521,13 +526,23 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		getchar();
 		return op;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////MENU HISTORICO/////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
+
+void moduloHistorico(void) {
+		char opcao;
+		do {
+			opcao = menuHistorico();
+			switch(opcao){
+				
+					case '1':		menuHistorico();								
+			}					
+		} while (opcao != '0');
+}
 
 char menuHistorico(void) {
 system("clear");
@@ -559,7 +574,5 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-		getchar();
 		return op;
 }

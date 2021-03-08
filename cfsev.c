@@ -9,11 +9,17 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 #include "menuPrincipal.h"
 #include "moduloInformacoes.h"
 #include "menuUsuario.h"
 #include "moduloVagas.h"
 #include "menuHistorico.h"
+#include <stdio.h>
+
+
+
 /// 
 ///  Assinaturas das funções
 ///

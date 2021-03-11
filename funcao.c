@@ -48,3 +48,36 @@ void validaPlaca(char placa[]){
             return 0;
         }
 }
+
+int main()
+{
+    int dia, mes, ano;
+
+    printf("Informe a data no seguinte formato (DD/MM/AAAA): \n");
+    scanf("%d/%d/%d", &dia, &mes, &ano);
+    if (ano >= 0 && ano <= 2020)
+    {
+        if (mes >= 1 && mes <= 12)
+        {
+            if ((dia >= 1 && dia <= 31) && (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12))
+                printf("Válido.\n");
+            else if ((dia >= 1 && dia <= 30) && (mes == 4 || mes == 6 || mes == 9 || mes == 11))
+                printf("Válido.\n");
+            else if ((dia >= 1 && dia <= 28) && (mes == 2))
+                printf("Válido.\n");
+            else if (dia == 29 && mes == 2 && (ano % 400 == 0 || (ano % 4 == 0 && ano % 100 != 0)))
+                printf("Válido.\n");
+            else
+                printf("Inválido.\n");
+        }
+        else
+        {
+            printf("Inválido.\n");
+        }
+    }
+    else
+    {
+        printf("Inválido.\n");
+    }
+    return 0;
+} 

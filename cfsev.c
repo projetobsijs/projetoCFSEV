@@ -12,23 +12,16 @@
 #include <string.h>
 #include <ctype.h>
 #include "menuPrincipal.h"
-#include "moduloInformacoes.h"
-#include "menuUsuario.h"
+#include "moduloHistorico.h"
+#include "moduloinformacoes.h"
+#include "moduloRelatorio.h"
+#include "moduloUsuario.h"
 #include "moduloVagas.h"
-#include "menuHistorico.h"
-#include <stdio.h>
-
-
-
-/// 
-///  Assinaturas das funções
-///
-
-
 
 ///
 /// Programa Principal
 ///
+
 int main(void) {
 		char opcao;
 		do {
@@ -42,13 +35,10 @@ int main(void) {
 					case '3':		moduloHistorico();
 									break;
 					case '4':		moduloInformacoes();
+									break;		
+                    case '5':		moduloRelatorio();
 									break;								
-			}
-		
+			}						
 		} while (opcao != '0');
 		return 0;
 }
-
-
-
-

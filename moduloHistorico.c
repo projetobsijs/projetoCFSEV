@@ -1,10 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "menuPrincipal.h"
+#include "moduloHistorico.h"
 
-char menuPrincipal(void) {
-	char op;
+void moduloHistorico(void) {
+		char opcao;
+		do {
+			opcao = menuHistorico();
+			switch(opcao){
+				
+					case '1':		menuHistorico();								
+			}					
+		} while (opcao != '0');
+}
+
+char menuHistorico(void) {
 system("clear");
+	char op;
 		printf("\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("///                                                                       ///\n");
@@ -19,19 +30,16 @@ system("clear");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("///                                                                       ///\n");
 		printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
-		printf("///           = = = = = = = =  Menu Principal = = = = = = = =             ///\n");
+		printf("///           = = = = = = = = = = Historico = = = = = = = = =             ///\n");
 		printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           1. Modulo usuario                                           ///\n");
-		printf("///           2. Modulo vagas                                             ///\n");
-		printf("///           3. Modulo historico                                         ///\n");
-		printf("///           4. Informacoes sobre o sistema                              ///\n");
-		printf("///           5. Relatorio                                                ///\n");
-		printf("///           0. Encerra o programa                                       ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Escolha a opcao desejada: ");
+		printf("///           1. Historico do uso de vagas no ultimo dia                  ///\n");
+		printf("///           0. Voltar ao menu anterior                                  ///\n");
+		printf("///                                                                       ///\n");
+		printf("///           Escolha a opção desejada: ");
 		scanf("%c", &op);
-		getchar();		
+		getchar();
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");

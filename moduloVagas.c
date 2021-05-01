@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "moduloVagas.h"
+
 void moduloVagas(void) {
 		char opcao;
 		do {

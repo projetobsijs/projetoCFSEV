@@ -1,2 +1,1 @@
-//assinaturas//
 char menuPrincipal(void);

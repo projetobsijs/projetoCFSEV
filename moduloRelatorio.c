@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "moduloinformacoes.h"
+#include "moduloRelatorio.h"
 
-void moduloInformacoes(void) {
+void moduloRelatorio(void) {
 
-	telaSobre();
+	menuRelatorio();
 
 }
 
-void telaSobre(void) {
+void menuRelatorio(void) {
 system("clear");
 		printf("\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -24,15 +24,14 @@ system("clear");
 		printf("///                                                                       ///\n");
 		printf("///          ===================================================          ///\n");
 		printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
-		printf("///          = = = = = = = =   Programa CFSEV    = = = = = = = =          ///\n");
-		printf("///          = Controle do Fluxo da Saida/Entrada de Veiculos  =          ///\n");
+		printf("///          = = = = = = = =   Menu Relatorio    = = = = = = = =          ///\n");
 		printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
 		printf("///          ===================================================          ///\n");
 		printf("///                                                                       ///\n");
-		printf("///  Programa utilizado na disciplina DCT1106 - Programacao. Esse pro-    ///\n");
-		printf("///  grama ira controlar o fluxo de veiculos para a entrada e saida em    ///\n");
-		printf("///  estacionamentos, tendo como alvo as instituicoes publicas ou priva-  ///\n");
-		printf("///  das que oferecem estacionamento gratuito.                            ///\n");
+		printf("///  . Armazenamento de informações                                       ///\n");
+		printf("///  . Melhorias no sistema de cadastro                                   ///\n");
+		printf("///                                                                       ///\n");
+		printf("///                                                                       ///\n");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");

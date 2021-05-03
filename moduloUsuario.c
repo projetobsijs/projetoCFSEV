@@ -56,10 +56,10 @@ system("clear");
 		return op;
 }
 
-char telaCadastrarUsuario(void) {
-	char placa[7];
-	char nome[51];
-	char celular[12];
+char telaCadastrarUsuario(void) { 
+ char placa[7]; 
+ char nome[51];
+ char celular[12];
 
 system("clear");
 		printf("\n");

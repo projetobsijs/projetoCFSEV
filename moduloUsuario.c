@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "moduloUsuario.h"
 
+typedef struct usuario Usuario;
+
 void moduloUsuario(void){
 		char opcao;
 		do {
@@ -57,9 +59,8 @@ system("clear");
 }
 
 char telaCadastrarUsuario(void) { 
- char placa[7]; 
- char nome[51];
- char celular[12];
+
+Usuario *user;
 
 system("clear");
 		printf("\n");
@@ -79,14 +80,14 @@ system("clear");
 		printf("///           = = = = = = = = Cadastrar Usuario = = = = = = =             ///\n");
 		printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
 		printf("///                                                                       ///\n");
-		printf("///           Placa do Veículo (apenas números): ");
-		scanf("%[0-9 A-Z]", placa);
+		printf("///           Placa do Veículo: %s", user->placa);
+		scanf("%[0-9 A-Z]", user->placa);
 		getchar();
-		printf("///           Nome completo: ");
-		scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
+		printf("///           Nome completo: %s", user->nome);
+		scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", user->nome);
 		getchar();
-		printf("///           Celular  (apenas números): ");
-		scanf("%[0-9]", celular);
+		printf("///           Celular: %s ", user->celular);
+		scanf("%[0-9]", user->celular);
 		getchar();                                                                   
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");

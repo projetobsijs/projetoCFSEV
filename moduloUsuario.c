@@ -2,6 +2,15 @@
 #include <stdlib.h>
 #include "moduloUsuario.h"
 
+void pesquisarveiculo(void) {
+	Usuario *user;
+	char *placa;
+	placa = telaPesquisa;
+
+}
+
+
+
 typedef struct usuario Usuario;
 
 void moduloUsuario(void){
@@ -62,6 +71,9 @@ char telaCadastrarUsuario(void) {
 
 Usuario *user;
 
+user = (Usuario*) malloc(sizeof(Usuario));
+
+
 system("clear");
 		printf("\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -91,9 +103,12 @@ system("clear");
 		getchar();                                                                   
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
+free(user);
 }
 
-void telaPesquisa(void) {
+char* telaPesquisa(void) {
+	char* placa;
+	placa = (char*) malloc(sizeof(char));
 system("clear");
 		printf("\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -113,12 +128,15 @@ system("clear");
 		printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
 		printf("///                                                                       ///\n");
 		printf("///           Digite o nome do Usuario:                                   ///\n");
+		scanf("%[0-9 A-Z]",placa);
+		getchar();
 		printf("///                                                                       ///\n");
 		printf("///           Digite 0 para voltar ao menu principal.                     ///\n");
 		printf("///                                                                       ///\n");
 		printf("///                                                                       ///\n");
 		printf("/////////////////////////////////////////////////////////////////////////////\n");
 		printf("\n");
+		return placa;
 }
 
 void telaPesquisaDois(void) {
